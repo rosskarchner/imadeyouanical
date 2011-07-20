@@ -1,0 +1,13 @@
+h1{font-family:'Hammersmith One',arial,serif;font-size:2em;}
+body{font-size:16px;padding:50px;}
+form#addevent{width:750px;border:1px #333 solid;}
+form fieldset{margin-bottom:10px;margin-top:10px;}
+form label{display:block;float:left;text-align:right;padding-right:10px;padding-top:5px;}
+form div.field{margin-top:5px;margin-bottom:2px;}form div.field label{width:50px;font-size:80%;}
+form div.field input[type="text"]{width:300px;}
+form div.field input[type="date"]{width:120px;}
+form .splitform-left{float:left;}
+form .controls{clear:both;padding-left:5px;margin-top:5px;text-align:right;padding-right:35px;font-size:60%;padding-bottom:8px;background-color:black;padding:10px 35px 10px 10px;color:white;margin-top:5px;}form .controls a{color:white;text-decoration:none;font-weight:bolder;border-bottom:1px solid white;}
+form .controls .default{border:2px solid grey;padding:2px;background-color:yellow;color:black;}
+form #adddates{margin-left:60px;font-size:60%;font-weight:bolder;}
+#ui-datepicker-div{font-size:80%;}

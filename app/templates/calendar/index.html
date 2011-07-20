@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Calendars you created</h2>
+<a href="/calendars/add/">Create a new calendar</a>
+<ul>
+{% for calendar in users_calendars %}
+<li><a href="{{ calendar.view_uri }}">{{calendar.title}}</a>(<a href="{{ calendar.edit_uri }}">edit</a>)
+</li>
+
+
+{% endfor %}
+</ul>
+
+<h2>Calendars you are Following</h2>
+Follow an new:  <a href="/calendars/add-sourced/ical">iCal</a>, <a href="/calendars/add-sourced/gcal">Google Calendar</a>
+<ul>
+{% for calendar in followed_calendars %}
+<li><a href="{{ calendar.view_uri}}">{{calendar.title}}</a>
+<form method="POST" action="{{ url_for('calendar/follow') }}"> 
+<input type="hidden" name="unfollow" value="true"/>
+<input type="hidden" name="calendar" value="{{calendar.key()}}"/>
+<input type="submit" value="unfollow"/>
+
+</form>
+</li>
+{% else %}
+
+<li>No calendars</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

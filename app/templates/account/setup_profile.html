@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% from '_form_macros.html' import form_field %}
+
+{% block title %}Set up your profile on Share Events {% endblock %}
+
+{% block content %}
+
+<section>
+
+<form method="post" action="" enctype="multipart/form-data" class="tipfy-form">
+            <ol>
+                <li>{{ form_field(form.nickname, class='medium') }}</li>
+				<li>{{ form_field(form.email, class='medium') }}</li>
+				<li>{{ form_field(form.profile_slug, class='large') }}
+				<br/> Your profile will be at http://sharevents.com/<em>username</em></li>
+
+            </ol>
+            <fieldset class="submit">
+                <input type="submit" name="submit" value="Save" class="submit">
+            </fieldset>
+            <input type="hidden" name="continue" value="{{continue}}"/>
+        </form>
+</section>
+
+{% endblock %}

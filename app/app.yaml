@@ -1,0 +1,24 @@
+application: shareeventshr
+version: zero
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_ah/pipeline(/.*)?
+  script: pl_wrapper.py
+
+- url: /static/([^/]*)/(.*)
+  static_files: static/\2
+  upload: static/(.*)
+  expiration: "2000d"
+
+- url: /setup/.*
+  script: main.py
+  login: required
+  
+- url: .*
+  script: main.py
+  
+builtins:
+  - appstats: on
+  - datastore_admin: on

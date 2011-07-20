@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>{{calendar.title }} </h1>
+
+
+<p>{% if allow_submissions is enabled %}<a href="/add">Add an event</a>{% endif %}</p>
+<div id="events">
+<ul>
+{% for event in events %}
+
+<li>{{ event.title }} {{event.start }}</li>
+
+{% endfor %}
+</ul>
+</div>
+
+
+{% endblock %}

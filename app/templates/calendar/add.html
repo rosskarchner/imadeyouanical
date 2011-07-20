@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% from 'form_macros.html' import form_field %}
+
+
+
+{% block body %}
+
+<form method="POST">
+<h3>This stuff is important</h3>
+<ul>
+<li> {{ form_field(form.title) }}</li>
+<li> {{ form_field(form.slug) }}</li>
+<li> {{ form_field(form.timezone) }}</li>
+<li> {{ form_field(form.who_can_edit) }}</li>
+</ul>
+<h3>Other Options</h3>
+<ul>
+<li> {{ form_field(form.allow_submissions) }}</li>
+</ul>
+
+
+<input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

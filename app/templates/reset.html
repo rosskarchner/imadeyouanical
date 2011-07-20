@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>{% block title %}Share Events{% endblock title %}</title>
+	<link type="text/css" href="/static/{{ app_version }}/jqueryui/css/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    
+	<link rel="stylesheet" href="/static/{{ app_version }}/css/style.css">
+	<link rel="stylesheet" href="/static/{{ app_version }}/css/shareevents.css" />
+    <script src="/static/{{ app_version }}/js/jq.js"></script>
+    <script type="text/javascript" src="/static/{{ app_version }}/jqueryui/js/jquery-ui-1.8.14.custom.min.js"></script>
+
+	<script src="/static/{{ app_version }}/js/libs/modernizr-1.7.min.js"></script>
+	
+		{% block layoutextra %}
+
+	{% endblock %}
+    {% block headextra %}
+
+	{% endblock %}
+<script src="js/script.js"></script>
+</head>
+<body>
+
+
+
+
+	
+
+	<!--[if lt IE 7 ]>
+	<script src="js/libs/dd_belatedpng.js"></script>
+	<script> DD_belatedPNG.fix('img, .png_bg');</script>
+	<![endif]-->
+	
+{% block body %}
+
+{% endblock body %}
+
+</body>
+</html>

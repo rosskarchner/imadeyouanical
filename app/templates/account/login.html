@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="row">
+<div class="cell position-0 width-16">	
+<h1> Sign in to with your Google</h1>
+<div id="featured_providers">
+<a href="{{ google_login_url }}"><img src="/static/{{ app_version }}/google-login.png" alt="Log in with Google"/></a>
+
+</div>
+
+</div>
+</div>
+
+{% endblock content %}
