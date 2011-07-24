@@ -1,0 +1,7 @@
+# What is this crazy thing?
+
+When this works, it'll be a webapp that provides an iCal feed for Eventbrite organizers
+
+
+
+
